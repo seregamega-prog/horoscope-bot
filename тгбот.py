@@ -4,8 +4,11 @@ import time
 import random
 
 # === Настройки ===
-TOKEN = "8249542584:AAEs4O0D9-I9SsfbtKKbUQd7cymqCdlqFwE"        # вставь сюда токен от BotFather
-CHANNEL_ID = "@goroskopnauki"         # сюда ID канала
+import os  # добавь в начале файла, если ещё нет
+
+TOKEN = os.getenv("TOKEN")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
+
 bot = telebot.TeleBot(TOKEN)
 
 # === Знаки зодиака ===
